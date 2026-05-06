@@ -1,5 +1,13 @@
 export type Theme = 'sophisticated-dark' | 'clean-modern';
 
+export interface Course {
+  id: string;
+  name: string;
+  color: string;
+  icon: any;
+  desc: string;
+}
+
 export interface TimetableRow {
   week: number;
   startDate: string;
