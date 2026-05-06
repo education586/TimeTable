@@ -61,7 +61,7 @@ export default function LoginPage({ onLoginSuccess }: LoginPageProps) {
           playsInline
           className="absolute inset-0 w-full h-full object-cover z-0 opacity-60"
         >
-          <source src="/bg.mp4" type="video/mp4" />
+          <source src="https://tan-occasional-flamingo-688.mypinata.cloud/ipfs/bafybeiaq3p4iapinrcejsmdc576zx7hpss4kq4wsa46y7buwbit463haea" type="video/mp4" />
         </video>
 
         {/* Refined Mesh Pattern - more prominent dots */}
