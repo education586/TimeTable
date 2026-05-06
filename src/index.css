@@ -1,2 +1,102 @@
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Public+Sans:wght@400;600&family=Anton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
 @import "tailwindcss";
+
+@theme {
+  --color-brand-50: #fdfafb;
+  --color-brand-100: #f9f2f5;
+  --color-brand-200: #f2e5eb;
+  --color-brand-300: #e5ccd8;
+  --color-brand-400: #cc99b0;
+  --color-brand-500: #b36688;
+  --color-brand-600: #58334a;
+  --color-brand-700: #4a2b3e;
+  --color-brand-800: #3c2332;
+  --color-brand-900: #2d1a26;
+  --color-brand-950: #1f121a;
+
+  --font-heading: "Plus Jakarta Sans", sans-serif;
+  --font-body: "Plus Jakarta Sans", sans-serif;
+  --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-secondary: "Plus Jakarta Sans", sans-serif;
+
+  --font-weight-body: 450;
+  --font-weight-500: 500;
+  --font-weight-600: 600;
+  --font-weight-700: 700;
+  --font-weight-900: 900;
+  
+  --letter-spacing-heading: 0.5px;
+}
+
+@layer utilities {
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .glass {
+    @apply bg-white/70 backdrop-blur-xl border border-white/20;
+  }
+  
+  .card-shadow {
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.01), 0 1px 2px -1px rgba(0, 0, 0, 0.01), 0 20px 25px -5px rgba(0, 0, 0, 0.03), 0 8px 10px -6px rgba(0, 0, 0, 0.03);
+  }
+
+  .btn-primary {
+    @apply bg-[#58334a] text-white px-5 py-2.5 rounded-xl font-bold transition-all hover:bg-[#48283a] hover:scale-[1.02] active:scale-[0.98] shadow-lg shadow-purple-900/10 flex items-center justify-center gap-2 disabled:opacity-50 disabled:pointer-events-none;
+    font-size: 13px;
+  }
+
+  .btn-secondary {
+    @apply bg-white text-slate-900 border border-slate-200 px-5 py-2.5 rounded-xl font-bold transition-all hover:bg-slate-50 hover:border-slate-300 active:scale-[0.98] flex items-center justify-center gap-2;
+    font-size: 13px;
+  }
+
+  .input-field {
+    @apply w-full bg-slate-50 border border-transparent px-4 py-3 rounded-xl font-medium outline-none focus:bg-white focus:border-slate-200 focus:ring-4 focus:ring-slate-100 transition-all placeholder:text-slate-300;
+    font-size: 13px;
+  }
+
+
+  .course-heading {
+  font-family: var(--font-sans);
+  font-size: 30px;
+  font-weight: 700;
+  letter-spacing: var(--letter-spacing-heading);
+}
+
+.course-desc {
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: 500;
+}
+}
+
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+*::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+* {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+body {
+  @apply antialiased text-slate-900 bg-[#f0ede8];
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 450;
+  font-feature-settings: "ss01", "ss02", "cv01", "cv02";
+}

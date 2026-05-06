@@ -1,13 +1,4 @@
-export type Theme = 
-  | 'sophisticated-dark' 
-  | 'university-portal' 
-  | 'academic-tech' 
-  | 'minimal-research' 
-  | 'modern-corporate'
-  | 'classic-heritage'
-  | 'scientific-journal'
-  | 'government-official'
-  | 'campus-bulletin';
+export type Theme = 'sophisticated-dark' | 'clean-modern';
 
 export interface TimetableRow {
   week: number;
@@ -15,6 +6,10 @@ export interface TimetableRow {
   endDate: string;
   intakeCode: string;
   mode: string;
+  isCurrent?: boolean;
+  isBreak?: boolean;
+  time?: string;
+  trainers?: string;
 }
 
 export interface IntakeOption {
